@@ -134,18 +134,20 @@
         </div>
     </nav>
 
-    <!-- Герой секция -->
+<!-- Герой секция -->
     <header class="container py-5 mt-5">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <!-- Изменен порядок: на мобильных фото будет первым (order-1 order-lg-2) -->
+            <div class="col-lg-6 text-left order-1 order-lg-2 mb-4 mb-lg-0">
+                <img src="https://placehold.co/400x500/6f42c1/white?text=Фото+преподавателя" alt="Фото преподавателя" class="img-fluid rounded shadow">
+            </div>
+            <!-- На мобильных текст будет вторым (order-2 order-lg-1) -->
+            <div class="col-lg-6 order-2 order-lg-1">
                 <h1 class="display-4 fw-bold mb-4">Дарья Грачева</h1>
                 <h2 class="h3 text-muted mb-4">Преподаватель <span class="text-primary-custom">английского</span> и <span class="text-primary-custom">китайского</span> языков</h2>
                 <p class="lead mb-4">Помогаю студентам достигать fluency в английском и китайском языках через современные методики преподавания.</p>
                 <a href="#contact" class="btn btn-primary-custom btn-lg me-2">Связаться со мной</a>
                 <a href="#portfolio" class="btn btn-outline-primary-custom btn-lg">Мое портфолио</a>
-            </div>
-            <div class="col-lg-6 text-center">
-                <img src="https://placehold.co/400x500/6f42c1/white?text=Фото+преподавателя" alt="Фото преподавателя" class="img-fluid rounded shadow">
             </div>
         </div>
     </header>
