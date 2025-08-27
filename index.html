@@ -97,6 +97,95 @@
             align-items: center;
             justify-content: center;
         }
+
+        .photo-container {
+            position: relative;
+        }
+
+        .main-photo {
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .main-photo:hover {
+            transform: scale(1.02);
+        }
+
+        .small-photos {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .small-photo {
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .small-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .feature-card {
+            padding: 25px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 992px) {
+            .small-photos {
+                flex-direction: row;
+                margin-top: 20px;
+            }
+
+            .hero-section {
+                padding: 40px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .small-photos {
+                flex-direction: column;
+            }
+
+            .display-4 {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -137,17 +226,35 @@
 <!-- Герой секция -->
     <header class="container py-5 mt-5">
         <div class="row align-items-center">
-            <!-- Изменен порядок: на мобильных фото будет первым (order-1 order-lg-2) -->
             <div class="col-lg-6 text-left order-1 order-lg-2 mb-4 mb-lg-0">
-                <img src="https://placehold.co/400x500/6f42c1/white?text=Фото+преподавателя" alt="Фото преподавателя" class="img-fluid rounded shadow">
+                <div class="row photo-container">
+                    <div class="col-md-7">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Основное фото преподавателя" class="img-fluid main-photo mb-4 mb-md-0">
+                    </div>
+                    <div class="col-md-5 small-photos">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Дополнительное фото 1" class="img-fluid small-photo">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Дополнительное фото 2" class="img-fluid small-photo">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Дополнительное фото 2" class="img-fluid small-photo">
+                    </div>
+                </div>
             </div>
-            <!-- На мобильных текст будет вторым (order-2 order-lg-1) -->
             <div class="col-lg-6 order-2 order-lg-1">
-                <h1 class="display-4 fw-bold mb-4">Дарья Грачева</h1>
-                <h2 class="h3 text-muted mb-4">Преподаватель <span class="text-primary-custom">английского</span> и <span class="text-primary-custom">китайского</span> языков</h2>
-                <p class="lead mb-4">Помогаю студентам достигать fluency в английском и китайском языках через современные методики преподавания.</p>
-                <a href="#contact" class="btn btn-primary-custom btn-lg me-2">Связаться со мной</a>
-                <a href="#portfolio" class="btn btn-outline-primary-custom btn-lg">Мое портфолио</a>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h1 class="display-4 fw-bold mb-4">Дарья Грачева</h1>
+                        <h2 class="h3 text-muted mb-4">Преподаватель <span class="text-primary-custom">английского</span> и <span class="text-primary-custom">китайского</span> языков</h2>
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><i class="bi bi-envelope-fill text-primary-custom me-2"></i> email@example.com</li>
+                                <li class="mb-3"><i class="bi bi-telephone-fill text-primary-custom me-2"></i> +7 (999) 123-45-67</li>
+                                <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary-custom me-2"></i> Москва, ул. Образцова, 25</li>
+                                <li class="mb-3"><i class="bi bi-clock-fill text-primary-custom me-2"></i> Пн-Пт: 9:00 - 20:00</li>
+                            </ul>
+                            <div class="d-flex mt-4">
+                                <a href="#" class="btn btn-outline-primary-custom me-2"><i class="bi bi-telegram me-1"></i> Telegram</a>
+                                <a href="#" class="btn btn-outline-primary-custom me-2"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a>
+                            </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -353,54 +460,6 @@
                             <div class="card-body">
                                 <h5 class="card-title">Благодарность от студентов</h5>
                                 <p class="card-text">Благодарственное письмо от студентов за профессионализм</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-heading">Контакты</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary-custom mb-4">Свяжитесь со мной</h5>
-                            <form>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Ваше имя</label>
-                                    <input type="text" class="form-control" id="name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Сообщение</label>
-                                    <textarea class="form-control" id="message" rows="4" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary-custom">Отправить сообщение</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary-custom mb-4">Контактная информация</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-3"><i class="bi bi-envelope-fill text-primary-custom me-2"></i> email@example.com</li>
-                                <li class="mb-3"><i class="bi bi-telephone-fill text-primary-custom me-2"></i> +7 (999) 123-45-67</li>
-                                <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary-custom me-2"></i> Москва, ул. Образцова, 25</li>
-                                <li class="mb-3"><i class="bi bi-clock-fill text-primary-custom me-2"></i> Пн-Пт: 9:00 - 20:00</li>
-                            </ul>
-                            <div class="d-flex mt-4">
-                                <a href="#" class="btn btn-outline-primary-custom me-2"><i class="bi bi-telegram me-1"></i> Telegram</a>
-                                <a href="#" class="btn btn-outline-primary-custom me-2"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a>
                             </div>
                         </div>
                     </div>
