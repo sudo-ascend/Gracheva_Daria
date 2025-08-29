@@ -187,6 +187,10 @@
                 font-size: 2.5rem;
             }
         }
+
+
+
+
     </style>
 </head>
 <body>
@@ -196,64 +200,106 @@
     </a>
 
     <!-- Навигация -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary-custom" href="#">Преподаватель Дарья</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Телефон для мобильных -->
+            <div class="d-lg-none ms-auto">
+                <a class="nav-link text-dark" href="tel:+79858251893">
+                    <i class="bi bi-telephone-fill text-primary-custom me-1"></i> +7 (985) 825-18-93
+                </a>
+            </div>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <!-- Навигационные ссылки -->
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Обо мне</a>
+                        <a class="nav-link text-dark fw-medium" href="#about">Обо мне</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#education">Образование</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Опыт</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Портфолио</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Контакты</a>
+                        <a class="nav-link text-dark fw-medium" href="#experience">Опыт</a>
                     </li>
                 </ul>
+
+                <!-- Правый блок - телефон и соцсети -->
+                <div class="d-flex align-items-center">
+                    <!-- Телефон для десктопа -->
+                    <div class="d-none d-lg-block me-4">
+                        <a class="nav-link text-dark fw-medium" href="tel:+79858251893">
+                            <i class="bi bi-telephone-fill text-primary-custom me-1"></i> +7 (985) 825-18-93
+                        </a>
+                    </div>
+
+                    <!-- Социальные сети -->
+                    <div class="d-flex">
+                        <a href="#" class="nav-link text-primary-custom me-3 fs-5">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="#" class="nav-link text-primary-custom fs-5">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-<!-- Герой секция -->
-    <header class="container py-5 mt-5">
-        <div class="row align-items-center">
-            <div class="col-lg-6 text-left order-1 order-lg-2 mb-4 mb-lg-0">
-                <div class="row photo-container">
-                    <div class="col-md-7">
-                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Основное фото преподавателя" class="img-fluid main-photo mb-4 mb-md-0">
+    <!-- Герой секция -->
+    <header class="container py-5 mt-3">
+        <div class="row align-items-stretch">
+            <div class="col-lg-7 text-left order-1 order-lg-2 mb-4 mb-lg-0">
+                <div class="row photo-container h-100">
+                    <div class="col-md-6 d-flex flex-column">
+                        <img src="images/01.jpeg" alt="Основное фото преподавателя"
+                             class="img-fluid main-photo mb-4 mb-md-0 flex-grow-1"
+                             style="height: 300px; object-fit: cover;">
                     </div>
-                    <div class="col-md-5 small-photos">
-                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Дополнительное фото 1" class="img-fluid small-photo">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Дополнительное фото 2" class="img-fluid small-photo">
-                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Дополнительное фото 2" class="img-fluid small-photo">
+                    <div class="col-md-6 small-photos d-flex flex-column">
+                        <img src="images/и1.jpeg"
+                             alt="Дополнительное фото 1"
+                             class="img-fluid small-photo mb-2 mt-3 flex-grow-1"
+                             style="height: 95px; object-fit: cover;">
+                        <img src="images/и4.jpeg"
+                             alt="Дополнительное фото 2"
+                             class="img-fluid small-photo mb-3 flex-grow-1"
+                             style="height: 95px; object-fit: cover;">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 order-2 order-lg-1">
-                <div class="card border-0 shadow-sm">
+            <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column">
+                <div class="card border-0 shadow-sm mb-4 flex-grow-1">
                     <div class="card-body">
-                        <h1 class="display-4 fw-bold mb-4">Дарья Грачева</h1>
-                        <h2 class="h3 text-muted mb-4">Преподаватель <span class="text-primary-custom">английского</span> и <span class="text-primary-custom">китайского</span> языков</h2>
-                            <ul class="list-unstyled">
-                                <li class="mb-3"><i class="bi bi-envelope-fill text-primary-custom me-2"></i> email@example.com</li>
-                                <li class="mb-3"><i class="bi bi-telephone-fill text-primary-custom me-2"></i> +7 (999) 123-45-67</li>
-                                <li class="mb-3"><i class="bi bi-geo-alt-fill text-primary-custom me-2"></i> Москва, ул. Образцова, 25</li>
-                                <li class="mb-3"><i class="bi bi-clock-fill text-primary-custom me-2"></i> Пн-Пт: 9:00 - 20:00</li>
-                            </ul>
-                            <div class="d-flex mt-4">
-                                <a href="#" class="btn btn-outline-primary-custom me-2"><i class="bi bi-telegram me-1"></i> Telegram</a>
-                                <a href="#" class="btn btn-outline-primary-custom me-2"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a>
+                        <h1 class="display-4 fw-bold mb-4">Грачева Дарья Максимовна</h1>
+                        <h2 class="h3 text-muted mb-4">Преподаватель <span class="text-primary-custom">английского</span> языка</h2>
+<!--                         <p class="fs-7">Я препoдаю английский язык детям и пoдрoсткам 2 года.-->
+<!--                                    Я учусь на 3 курсе в МПГУ на пeдагога китaйcкoгo и aнглийского языкoв.-->
+<!--                                    </p>-->
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="bi bi-telephone-fill text-primary-custom me-2"></i> +7 (985) 825-18-93</li>
+                            <li class="mb-3"><i class="bi bi-clock-fill text-primary-custom me-2"></i> Пн-Вс: 9:00 - 22:00</li>
+                        </ul>
+                        <div class="d-flex mt-4">
+                            <a href="#" class="btn btn-outline-primary-custom me-2"><i class="bi bi-telegram me-1"></i> Telegram</a>
+                            <a href="#" class="btn btn-outline-primary-custom me-2"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm flex-grow-1">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="education-icon bg-primary-custom p-3 me-3">
+                                <i class="bi bi-award-fill text-white fs-4"></i>
                             </div>
+                            <div>
+                                <h5 class="card-title mb-0">Обазование</h5>
+                                <p class="text-muted mb-0">МПГУ (бывш. МГПИ им. Ленина), 2023-2028</p>
+                            </div>
+                        </div>
+                        <p class="card-text">Институт иностранных языков, направление «Педагогическое образование с двумя профилями подготовки: китайский и английский»</p>
                     </div>
                 </div>
             </div>
@@ -263,96 +309,22 @@
     <!-- Обо мне -->
     <section id="about" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-heading">Обо мне</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <p class="fs-5">Меня зовут Дарья, и я профессиональный преподаватель английского и китайского языков с более чем 8-летним опытом работы.</p>
-                    <p>Я специализируюсь на подготовке студентов к международным экзаменам, ведению бизнес-переговоров и повседневному общению. Использую коммуникативный подход, который позволяет студентам начать говорить на языке с первых занятий.</p>
+            <div class="row align-items-stretch">
+                <div class="col-lg-6 text-left order-1 order-lg-2 mb-4 mb-lg-0">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 text-left order-1 order-lg-2 mb-4 mb-lg-0">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title text-primary-custom">Методика преподавания</h5>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Коммуникативный подход</li>
-                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Индивидуальная программа</li>
-                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Фокус на разговорную практику</li>
-                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Современные учебные материалы</li>
-                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Подготовка к экзаменам IELTS, HSK</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Разговорная практика с 1 занятия</li>
+                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Много читаем и слушаем на анг.языке</li>
+                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Помощь с школьной домашней работой</li>
+                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Индивидуальный подход к каждому ученику</li>
+                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Преодолеваем языковой барьер</li>
+                                <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Проходим все разделы языка</li>
 
-    <!-- Образование -->
-    <section id="education" class="py-5">
-        <div class="container">
-            <h2 class="section-heading">Образование</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 portfolio-item border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="education-icon bg-primary-custom p-3 me-3">
-                                    <i class="bi bi-award-fill text-white fs-4"></i>
-                                </div>
-                                <div>
-                                    <h5 class="card-title mb-0">Магистр лингвистики</h5>
-                                    <p class="text-muted mb-0">МГУ им. Ломоносова, 2015-2017</p>
-                                </div>
-                            </div>
-                            <p class="card-text">Углубленное изучение методик преподавания иностранных языков, педагогики и межкультурной коммуникации.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 portfolio-item border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="education-icon bg-primary-custom p-3 me-3">
-                                    <i class="bi bi-translate text-white fs-4"></i>
-                                </div>
-                                <div>
-                                    <h5 class="card-title mb-0">Курсы китайского языка</h5>
-                                    <p class="text-muted mb-0">Пекинский университет, 2014</p>
-                                </div>
-                            </div>
-                            <p class="card-text">Годовой курс интенсивного изучения китайского языка и культуры в Китае с носителями языка.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 portfolio-item border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="education-icon bg-primary-custom p-3 me-3">
-                                    <i class="bi bi-book-half text-white fs-4"></i>
-                                </div>
-                                <div>
-                                    <h5 class="card-title mb-0">Бакалавр филологии</h5>
-                                    <p class="text-muted mb-0">МГЛУ, 2011-2015</p>
-                                </div>
-                            </div>
-                            <p class="card-text">Изучение английского языка и литературы, основ перевода и методики преподавания.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 portfolio-item border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="education-icon bg-primary-custom p-3 me-3">
-                                    <i class="bi bi-trophy-fill text-white fs-4"></i>
-                                </div>
-                                <div>
-                                    <h5 class="card-title mb-0">Красный диплом</h5>
-                                    <p class="text-muted mb-0">С отличием, 2015</p>
-                                </div>
-                            </div>
-                            <p class="card-text">Диплом с отличием за успехи в учебе и научной деятельности в области лингвистики.</p>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -397,78 +369,6 @@
         </div>
     </section>
 
-    <!-- Портфолио -->
-    <section id="portfolio" class="py-5">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="section-heading mb-0">Портфолио</h2>
-                <button id="togglePortfolio" class="btn btn-outline-primary-custom">
-                    <i class="bi bi-chevron-down"></i> Свернуть
-                </button>
-            </div>
-            <p class="lead mb-5">Мои сертификаты, дипломы и достижения в преподавании</p>
-
-            <div id="portfolioGrid">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card portfolio-item border-0 shadow-sm">
-                            <img src="https://placehold.co/300x200/6f42c1/white?text=Диплом+магистра" class="card-img-top" alt="Диплом магистра">
-                            <div class="card-body">
-                                <h5 class="card-title">Диплом магистра</h5>
-                                <p class="card-text">Диплом с отличием магистра лингвистики МГУ им. Ломоносова</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card portfolio-item border-0 shadow-sm">
-                            <img src="https://placehold.co/300x200/d63384/white?text=Сертификат+HSK" class="card-img-top" alt="Сертификат HSK">
-                            <div class="card-body">
-                                <h5 class="card-title">Сертификат HSK 6</h5>
-                                <p class="card-text">Высший уровень владения китайским языком</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card portfolio-item border-0 shadow-sm">
-                            <img src="https://placehold.co/300x200/0d6efd/white?text=Сертификат+IELTS" class="card-img-top" alt="Сертификат IELTS">
-                            <div class="card-body">
-                                <h5 class="card-title">Сертификат IELTS Trainer</h5>
-                                <p class="card-text">Сертификат, позволяющий готовить студентов к экзамену IELTS</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card portfolio-item border-0 shadow-sm">
-                            <img src="https://placehold.co/300x200/6f42c1/white?text=Красный+диплом" class="card-img-top" alt="Красный диплом">
-                            <div class="card-body">
-                                <h5 class="card-title">Красный диплом</h5>
-                                <p class="card-text">Диплом бакалавра с отличием Московского государственного лингвистического университета</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card portfolio-item border-0 shadow-sm">
-                            <img src="https://placehold.co/300x200/d63384/white?text=Сертификат+Китай" class="card-img-top" alt="Сертификат из Китая">
-                            <div class="card-body">
-                                <h5 class="card-title">Сертификат из Китая</h5>
-                                <p class="card-text">Сертификат об окончании курсов китайского языка в Пекине</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card portfolio-item border-0 shadow-sm">
-                            <img src="https://placehold.co/300x200/0d6efd/white?text=Благодарность" class="card-img-top" alt="Благодарность">
-                            <div class="card-body">
-                                <h5 class="card-title">Благодарность от студентов</h5>
-                                <p class="card-text">Благодарственное письмо от студентов за профессионализм</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Футер -->
     <footer class="py-4 bg-primary-custom text-white">
         <div class="container">
@@ -484,45 +384,5 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggleButton = document.getElementById('togglePortfolio');
-        const portfolioGrid = document.getElementById('portfolioGrid');
-        let isExpanded;
-
-        // Функция для проверки ширины экрана
-        function checkScreenSize() {
-            if (window.innerWidth >= 768) { // Планшет и больше (Bootstrap md breakpoint)
-                portfolioGrid.style.display = 'block';
-                toggleButton.innerHTML = '<i class="bi bi-chevron-up"></i> Свернуть';
-                isExpanded = true;
-            } else { // Телефон
-                portfolioGrid.style.display = 'none';
-                toggleButton.innerHTML = '<i class="bi bi-chevron-down"></i> Развернуть';
-                isExpanded = false;
-            }
-        }
-
-        // Проверяем при загрузке
-        checkScreenSize();
-
-        // Проверяем при изменении размера окна
-        window.addEventListener('resize', checkScreenSize);
-
-        toggleButton.addEventListener('click', function() {
-            if (isExpanded) {
-                // Скрываем портфолио
-                portfolioGrid.style.display = 'none';
-                toggleButton.innerHTML = '<i class="bi bi-chevron-down"></i> Развернуть';
-                isExpanded = false;
-            } else {
-                // Показываем портфолио
-                portfolioGrid.style.display = 'block';
-                toggleButton.innerHTML = '<i class="bi bi-chevron-up"></i> Свернуть';
-                isExpanded = true;
-            }
-        });
-    });
-</script>
 </body>
 </html>
