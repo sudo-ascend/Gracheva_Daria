@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="https://sudo-ascend.github.io/resume_website_for_Dasha/images/favicon.ico">
+    <link rel="shortcut icon" href="https://sudo-ascend.github.io/resume_website_for_Dasha/favicon.ico">
     <style>
         :root {
             --primary-color: #6f42c1; /* фиолетовый */
@@ -94,7 +94,7 @@
         .education-icon {
             width: 60px;
             height: 60px;
-            border-radius: 30px; /* Меньше скругления для квадратной формы */
+            border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -174,11 +174,11 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
 
         .hero-carousel .carousel-item img {
-            height: 500px;
+            height: 300px;
             object-fit: cover;
         }
 
@@ -197,6 +197,13 @@
             border-radius: 50%;
         }
 
+        /* Стили для иконок в хедере на мобильных */
+        .header-social-mobile {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+
         @media (max-width: 992px) {
             .small-photos {
                 flex-direction: row;
@@ -207,13 +214,36 @@
                 padding: 40px 0;
             }
 
-            /* Показываем слайдер на мобильных */
+            /* Показываем слайдер на планшетах и телефонах */
             .hero-carousel {
                 display: block;
             }
 
-            /* Скрываем обычные фото на мобильных */
+            /* Скрываем обычные фото на планшетах и телефонах */
             .photo-container {
+                display: none;
+            }
+
+            /* Изменяем порядок элементов на мобильных */
+            .mobile-order-1 {
+                order: 1;
+            }
+            .mobile-order-2 {
+                order: 2;
+            }
+            .mobile-order-3 {
+                order: 3;
+            }
+
+            /* Скрываем соцсети в бургер-меню на мобильных */
+            .navbar-nav .header-social {
+                display: none;
+            }
+        }
+
+        @media (min-width: 993px) {
+            /* Скрываем иконки в хедере на десктопе */
+            .header-social-mobile {
                 display: none;
             }
         }
@@ -238,6 +268,16 @@
     <!-- Навигация -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
+            <!-- Левый блок - иконки соцсетей для мобильных -->
+            <div class="header-social-mobile d-lg-none">
+                <a href="https://t.me/dda_shaaa" class="nav-link text-primary-custom me-2 fs-5" target="_blank">
+                    <i class="bi bi-telegram"></i>
+                </a>
+                <a href="#" class="nav-link text-primary-custom fs-5" target="_blank">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            </div>
+
             <!-- Телефон для мобильных -->
             <div class="d-lg-none ms-auto">
                 <a class="nav-link text-dark" href="tel:+79858251893" target="_blank">
@@ -273,8 +313,8 @@
                         </a>
                     </div>
 
-                    <!-- Социальные сети -->
-                    <div class="d-flex">
+                    <!-- Социальные сети (для десктопа) -->
+                    <div class="d-flex header-social">
                         <a href="https://t.me/dda_shaaa" class="nav-link text-primary-custom me-3 fs-5" target="_blank">
                             <i class="bi bi-telegram"></i>
                         </a>
@@ -291,55 +331,29 @@
     <header class="container py-5 mt-3">
         <div class="row align-items-stretch">
             <div class="col-lg-7 text-left order-1 order-lg-2 mb-4 mb-lg-0">
-                <!-- Слайдер для мобильных устройств -->
-                <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/01.jpeg" class="d-block w-100" alt="Основное фото преподавателя">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/и1.jpeg" class="d-block w-100" alt="Дополнительное фото 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/и4.jpeg" class="d-block w-100" alt="Дополнительное фото 2">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Предыдущий</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Следующий</span>
-                    </button>
-                </div>
-
                 <!-- Оригинальный блок с фото (виден только на десктопе) -->
                 <div class="row photo-container h-100">
                     <div class="col-md-6 d-flex flex-column">
-                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/01.jpeg" alt="Основное фото преподавателя"
+                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/01.webp" alt="Основное фото преподавателя"
                              class="img-fluid main-photo mb-4 mb-md-0 flex-grow-1"
                              style="height: 300px; object-fit: cover;">
                     </div>
                     <div class="col-md-6 small-photos d-flex flex-column">
-                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/и1.jpeg"
+                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/и1.webp"
                              alt="Дополнительное фото 1"
                              class="img-fluid small-photo mb-2 mt-3 flex-grow-1"
                              style="height: 95px; object-fit: cover;">
-                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/и4.jpeg"
+                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/и4.webp"
                              alt="Дополнительное фото 2"
                              class="img-fluid small-photo mb-3 flex-grow-1"
                              style="height: 95px; object-fit: cover;">
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column">
-                <div class="card border-0 shadow-sm mb-4 flex-grow-1">
+                <!-- Карточка с ФИО (первая на мобильных) -->
+                <div class="card border-0 shadow-sm mb-4 flex-grow-1 mobile-order-1">
                     <div class="card-body">
                         <h1 class="display-4 fw-bold mb-4">Грачева Дарья Максимовна</h1>
                         <h2 class="h3 text-muted mb-4">Преподаватель английского языка</h2>
@@ -353,14 +367,44 @@
                         </div>
                     </div>
                 </div>
-                <div class="card border-0 shadow-sm flex-grow-1">
+
+                <!-- Слайдер для мобильных устройств (между карточками) -->
+                <div id="heroCarousel" class="carousel slide hero-carousel mobile-order-2" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/01.webp" class="d-block w-100" alt="Основное фото преподавателя">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/и1.webp" class="d-block w-100" alt="Дополнительное фото 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/и4.webp" class="d-block w-100" alt="Дополнительное фото 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Предыдущий</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Следующий</span>
+                    </button>
+                </div>
+
+                <!-- Карточка с образованием (третья на мобильных) -->
+                <div class="card border-0 shadow-sm flex-grow-1 mobile-order-3">
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-3">
                             <div class="education-icon bg-primary-custom p-3 me-3">
                                 <i class="bi bi-award-fill text-white fs-4"></i>
                             </div>
                             <div>
-                                <h5 class="card-title mb-0">Обазование</h5>
+                                <h5 class="card-title mb-0">Образование</h5>
                                 <p class="text-muted mb-0">МПГУ (бывш. МГПИ им. Ленина), 2023-2028</p>
                             </div>
                         </div>
@@ -384,25 +428,24 @@
                         <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Индивидуальный подход к каждому ученику</li>
                         <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Преодолеваем языковой барьер</li>
                         <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Проходим все разделы языка</li>
-
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Учебные пособия -->
+    <!-- Учебные пособия -->
     <section id="books" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-heading">Учебные пособия</h2>
                 <div class="row align-items-stretch">
                     <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/у1.png" alt="Основное фото преподавателя"
+                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/у1.webp" alt="Основное фото преподавателя"
                                  class="img-fluid main-photo mb-4 mb-md-0 flex-grow-1"
                                  style="height: 350px; object-fit: cover;">
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/у2.png" alt="Основное фото преподавателя"
+                        <img src="https://sudo-ascend.github.io/resume_website_for_Dasha/images/у2.webp" alt="Основное фото преподавателя"
                                  class="img-fluid main-photo mb-4 mb-md-0 flex-grow-1"
                                  style="height: 350px; object-fit: cover;">
                     </div>
@@ -411,68 +454,63 @@
     </section>
 
     <!-- Опыт работы -->
-<section id="experience" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-heading">Опыт работы</h2>
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary-custom">Частный репетитор</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">с 2024 по настоящее время</h6>
-                        <p class="card-text">Проведение индивидуальных занятий по английскому языку для детей 2-9 класс</p>
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading">Опыт работы</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary-custom">Частный репетитор</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">с 2024 по настоящее время</h6>
+                            <p class="card-text">Проведение индивидуальных занятий по английскому языку для детей 2-9 класс</p>
 
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
-                                Paзбop cложных тем по гpaмматике c прaктичecким зaкрeплением.
-                            </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
-                                Пoполнeние словаpнoго запаcа для свoбoднoй рaзговopнoй peчи.
-                            </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                                    Paзбop cложных тем по гpaмматике c прaктичecким зaкрeплением.
+                                </li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                                    Пoполнeние словаpнoго запаcа для свoбoднoй рaзговopнoй peчи.
+                                </li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
                                     Интерактивные занятия. Современные учебные материалы:<br>(eyes open, speak out, gateway, kid's box) и технологии (quizlet).
-
-
-                            </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
-                                Пoполнeние словаpнoго запаcа для свoбoднoй рaзговopнoй peчи.
-                            </li>
-
-
-                        </ul>
+                                </li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>
+                                    Пoполнение словаpнoго запаcа для свoбoднoй рaзговopнoй peчи.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary-custom">Индивидуальные занятия</h5>
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-primary-custom fs-6">1000 руб./час</span>
-                            <span class="text-muted"><i class="bi bi-clock me-1"></i>60 минут</span>
-                        </div>
-                        <p>
-                           Занятия онлайн через Gооglе Мееt
-                        </p>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Персональная программа обучения</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Гибкий график занятий</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Все материалы включены</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Регулярный отчет о прогрессе</li>
-                            <li class="mb-3"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Подготовка к контрольным работам и тестам</li>
-                        </ul>
-                        <div class="text-center mt-4">
-                            <a href="https://www.avito.ru/" target="_blank" class="btn btn-primary-custom btn-lg px-4">
-                                <i class="bi bi-plus me-2"></i>Записаться на занятие
-                            </a>
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary-custom">Индивидуальные занятия</h5>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-primary-custom fs-6">1000 руб./час</span>
+                                <span class="text-muted"><i class="bi bi-clock me-1"></i>60 минут</span>
+                            </div>
+                            <p>
+                                Занятия онлайн через Gооglе Мееt
+                            </p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Персональная программа обучения</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Гибкий график занятий</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Все материалы включены</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Регулярный отчет о прогрессе</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Подготовка к контрольным работам и тестам</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="https://www.avito.ru/" target="_blank" class="btn btn-primary-custom btn-lg px-4">
+                                    <i class="bi bi-plus me-2"></i>Записаться на занятие
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-</section>
+    </section>
 
     <!-- Футер -->
     <footer class="py-4 bg-primary-custom text-white">
