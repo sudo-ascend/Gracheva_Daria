@@ -304,6 +304,12 @@
             transition-delay: 0.8s;
         }
 
+        /* Уменьшаем отступ между хедером и hero-секцией */
+        header.container {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+
         @media (max-width: 992px) {
             .small-photos {
                 flex-direction: row;
@@ -339,6 +345,12 @@
             .navbar-nav .header-social {
                 display: none;
             }
+
+            /* Уменьшаем отступы на мобильных */
+            header.container {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
         }
 
         @media (min-width: 993px) {
@@ -359,6 +371,12 @@
 
             .hero-carousel .carousel-item img {
                 height: 250px;
+            }
+
+            /* Еще меньше отступы на маленьких экранах */
+            header.container {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
             }
         }
     </style>
@@ -428,7 +446,7 @@
     </nav>
 
     <!-- Герой секция -->
-    <header class="container py-5">
+    <header class="container py-3">
         <div class="row align-items-stretch">
             <div class="col-lg-7 text-left order-1 order-lg-2 mb-4 mb-lg-0">
                 <!-- Оригинальный блок с фото (виден только на десктопе) -->

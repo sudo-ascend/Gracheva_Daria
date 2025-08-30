@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c2b3f69-0ba5-41dd-9a0c-eb43d7e1b0a4" name="Changes" comment="12 version commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3c2b3f69-0ba5-41dd-9a0c-eb43d7e1b0a4" name="Changes" comment="14 version commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +125,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756545069952</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="13 version commit">
+      <option name="closed" value="true" />
+      <created>1756545541593</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756545541593</updated>
+    </task>
+    <task id="LOCAL-00010" summary="14 version commit">
+      <option name="closed" value="true" />
+      <created>1756545602898</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756545602898</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +163,8 @@
     <MESSAGE value="10 version commit" />
     <MESSAGE value="11 version commit" />
     <MESSAGE value="12 version commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="12 version commit" />
+    <MESSAGE value="13 version commit" />
+    <MESSAGE value="14 version commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="14 version commit" />
   </component>
 </project>
