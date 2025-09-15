@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c2b3f69-0ba5-41dd-9a0c-eb43d7e1b0a4" name="Changes" comment="test commit">
-      <change afterPath="$PROJECT_DIR$/images/р3.jpg" afterDir="false" />
+    <list default="true" id="3c2b3f69-0ba5-41dd-9a0c-eb43d7e1b0a4" name="Changes" comment="test1 commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -164,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757964660825</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="test1 commit">
+      <option name="closed" value="true" />
+      <created>1757964838552</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757964838555</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +198,7 @@
     <MESSAGE value="15 version commit" />
     <MESSAGE value="18 version commit" />
     <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+    <MESSAGE value="test1 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test1 commit" />
   </component>
 </project>
